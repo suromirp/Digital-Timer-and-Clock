@@ -163,3 +163,5 @@ namespace Digital_Timer_Clock
     }
 }
 
+//TODO Add alarm
+
