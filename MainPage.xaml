@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Digital_Timer_Clock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Digital_Timer_Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="522">
+
+    <Canvas HorizontalAlignment="Center" Width="678">
+        <Image x:Name="Image" Source="/Assets/undraw_time-management_fedt.png" Height="218" Canvas.Left="209" Canvas.Top="574" Width="260" HorizontalAlignment="Left" />
+        <TimePicker x:Name="TimePicker" Canvas.Top="404" Canvas.Left="218" ClockIdentifier="24HourClock" FontFamily="Cascadia Code" FontSize="25" CornerRadius="5,5,5,5" VerticalAlignment="Top" BorderBrush="White" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="TimePicker_Hour" Canvas.Top="384" Canvas.Left="273" TextWrapping="Wrap" Text="H:" FontWeight="Bold" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="TimePicker_Hour_SelectionChanged"/>
+        <TextBlock x:Name="TimePicker_Min" Canvas.Top="384" Canvas.Left="392" TextWrapping="Wrap" Text="M:" FontWeight="Bold" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="TimePicker_Min_SelectionChanged"/>
+        <Button x:Name="Start" Content="Start" Click="StartButton_Click" Canvas.Left="183" Canvas.Top="341" Height="35" FontSize="18" FontFamily="Cascadia Code" Background="White" Foreground="Black" CornerRadius="5,5,5,5" ClickMode="Press" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button x:Name="Pause" Content="Pause" Click="PauseButton_Click" Canvas.Left="261" Canvas.Top="341" Height="35" FontSize="18" FontFamily="Cascadia Code" Background="White" Foreground="Black" CornerRadius="5,5,5,5" ClickMode="Press" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button x:Name="Reset" Content="Reset" Click="ResetButton_Click" Canvas.Left="428" Canvas.Top="341" Height="35" FontSize="18" FontFamily="Cascadia Code" Background="White" Foreground="Black" CornerRadius="5,5,5,5" ClickMode="Press" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button x:Name="Resume" Content="Resume" Click="ResumeButton_Click" Canvas.Left="339" Canvas.Top="341" Height="35" FontSize="18" FontFamily="Cascadia Code" Background="White" Foreground="Black" CornerRadius="5,5,5,5" ClickMode="Press" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <TextBox x:Name="TimerClock" Canvas.Top="266" Canvas.Left="239" Text="00:00:00" FontSize="40" FontFamily="Cascadia Code" FontWeight="Bold" IsReadOnly="True" CornerRadius="5,5,5,5" BorderBrush="White" TextChanged="TimerClock_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TimerText" Canvas.Top="238" Canvas.Left="239" TextWrapping="Wrap" Text="Timer:" FontWeight="Bold" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="Clock" Canvas.Top="56" Canvas.Left="171" Text="16:20:28" FontSize="72" FontFamily="Cascadia Code" FontWeight="Bold" IsReadOnly="True" PlaceholderText="00:00:00" Background="#FF0C5786" CornerRadius="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <MediaElement x:Name="AlarmSound" />
+    </Canvas>
+</Page>
