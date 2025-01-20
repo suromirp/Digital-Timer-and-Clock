@@ -6,10 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digital Timer and Clock", "Digital Timer and Clock.csproj", "{6E10A9D0-A726-46A0-AB7F-340FB92F21D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC04A053-81CE-4169-8468-149713B1178C}"
-	ProjectSection(SolutionItems) = preProject
-		Alarm_page.xaml = Alarm_page.xaml
-		Alarm_page.xaml.cs = Alarm_page.xaml.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

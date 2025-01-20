@@ -101,25 +101,32 @@ namespace Digital_Timer_Clock
             }
         }
 
-        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        private void PauseResumeButton_Click(object sender, RoutedEventArgs e)
         {
-            if (timer != null && timer.IsEnabled)
+            // Controll if timer is innitialized
+            if (timer == null)
+            {
+                TimerClock.Text = "Timer not started.";
+                return;
+            }
+
+            // Toggle status
+            isPaused = !isPaused;
+
+            // Change UI on status
+            PauseResume.Content = isPaused ? "Resume" : "Pause";
+
+            if (isPaused)
             {
                 timer.Stop();
-                isPaused = true;
-                timerStarted = true;
-            }
-        }
-
-        private void ResumeButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (timer != null && isPaused)
-            {
-                timer.Start();
-                isPaused = false;
-                timerStarted = true;
                 AlarmSound.Stop();
             }
+            else
+            {
+                timer.Start();
+            }
+
+            timerStarted = true;
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -163,5 +170,5 @@ namespace Digital_Timer_Clock
     }
 }
 
-//TODO Add alarm
+//TODO: Add alarm
 
